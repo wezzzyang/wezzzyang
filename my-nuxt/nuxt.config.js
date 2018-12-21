@@ -7,7 +7,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: pkg.name,
+    title: "杨晓龙的nuxt",
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -27,7 +27,8 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    'element-ui/lib/theme-chalk/index.css'
+    'element-ui/lib/theme-chalk/index.css',
+    '@/assets/css/style.sass'
   ],
 
   /*
@@ -61,5 +62,9 @@ module.exports = {
     extend(config, ctx) {
       
     }
+  },
+
+  router: {
+    middleware: 'auth'
   }
 }
